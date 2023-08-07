@@ -123,6 +123,7 @@ import('https://webr.r-wasm.org/latest/webr.mjs').then(async ({ WebR }) => {
 
   // Install and run shiny
   await webR.evalRVoid(`webr::install("shiny", repos="${window.location.href}/repo/")`);
+  
   webR.writeConsole(`
     library(shiny)
     options(shiny.trace = TRUE)
